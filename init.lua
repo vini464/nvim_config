@@ -1,7 +1,5 @@
-require("settings")
+require("utils")
 require("keymaps")
-
-
 
 -- package manager (using lazyNvim)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -21,3 +19,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup('plugins')
+
+-- default colorscheme:
+Change_bg("catppuccin-latte")

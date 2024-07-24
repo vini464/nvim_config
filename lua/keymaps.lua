@@ -23,3 +23,7 @@ vim.keymap.set('n', '<M-left>', ':vertical resize -2<cr>')
 vim.keymap.set('n', '<M-right>', ':vertical resize +2<cr>')
 vim.keymap.set('n', '<M-up>', ':horizontal resize -2<cr>')
 vim.keymap.set('n', '<M-down>', ':horizontal resize +2<cr>')
+
+-- themes:
+
+vim.keymap.set('n', '<leader>dt', ":lua ToggleDarkMode()<cr>")

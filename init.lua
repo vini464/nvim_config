@@ -20,5 +20,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup('plugins')
 
--- default colorscheme:
 Change_colors("catppuccin-latte")

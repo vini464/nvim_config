@@ -10,5 +10,5 @@
 
 ---
 
-- Instalação:
+- Instalação:\
 Mova a pasta nvim para ~/.config/

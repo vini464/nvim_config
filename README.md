@@ -1,14 +1,9 @@
 # MINHA CONFIGURAÇÃO BÁSICA PARA O NEOVIM
 ---
-***
 
 - Dependências:
 * npm
 * gcc
 * luarocks
- - lunajson
+ * lunajson
 
- ---
- ***
-
-* Para instalar basta mover estes arquivos para a pasta ~/.config

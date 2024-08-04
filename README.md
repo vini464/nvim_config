@@ -6,9 +6,9 @@
 * npm
 * gcc
 * luarocks
- * lunajson
+    * lunajson
 
 ---
 
 - Instalação:
-* Mova a pasta nvim para ~/.config/
+Mova a pasta nvim para ~/.config/

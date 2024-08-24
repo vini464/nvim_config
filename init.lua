@@ -1,5 +1,5 @@
-require("utils")
 require("keymaps")
+require"utils"
 
 -- package manager (using lazyNvim)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -17,6 +17,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+
 
 require("lazy").setup('plugins')
 

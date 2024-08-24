@@ -20,5 +20,6 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup('plugins')
-
-Change_colors("catppuccin-latte")
+local env_path = "/home/" .. os.getenv("USER") .. "/.config/nvim/lua/"
+local themes = require("utils.colorschemes")
+Change_colors(themes.default_theme)

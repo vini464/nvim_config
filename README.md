@@ -4,6 +4,3 @@
 - Dependências:
 * npm
 * gcc
-* luarocks
- * lunajson
-

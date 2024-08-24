@@ -1,5 +1,5 @@
 local env_path = "/home/" .. os.getenv("USER") .. "/.config/nvim/lua/"
-local themes_path = env_path .. "utils/colorschemes"
+local themes_path = env_path .. "utils/colorschemes.lua"
 local tableUpdater = require("tableUpdater")
 M = {
 
@@ -25,23 +25,12 @@ M = {
     local themes = tableUpdater.readTable(themes_path)
     local actual_theme = vim.g.colors_name
     if actual_theme == themes.light then
-      Change_colors(themes.dark)
-      require("lualine").setup({
-        options = {
-          theme = themes.dark,
-        },
-      })
       actual_theme = themes.dark
     else
-      Change_colors(themes.light)
-      require("lualine").setup({
-        options = {
-          theme = themes.light,
-        },
-      })
       actual_theme = themes.light
     end
     M.SetDefaultTheme(actual_theme)
+    M.Change_colors(actual_theme)
   end,
 
   Change_colors = function(color)
@@ -49,6 +38,12 @@ M = {
       vim.cmd.colorscheme("default")
     else
       vim.cmd.colorscheme(color)
+      print("colorscheme: "..color)
+      require("lualine").setup({
+        options = {
+          theme = color,
+        },
+      })
     end
   end,
 }

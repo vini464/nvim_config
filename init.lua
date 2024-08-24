@@ -20,6 +20,5 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup('plugins')
-local env_path = "/home/" .. os.getenv("USER") .. "/.config/nvim/lua/"
 local themes = require("utils.colorschemes")
-Change_colors(themes.default_theme)
+ChangeColors(themes.default_theme)

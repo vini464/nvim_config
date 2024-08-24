@@ -11,15 +11,10 @@ cmd("set number")
 vim.o.termguicolors = true
 
 
-
-function Change_colors(color)
-	if color == nil then
-		cmd.colorscheme("default")
-	else
-		cmd.colorscheme(color)
-	end
-end
 local handleThemes = require("handleThemes")
 function ToggleDarkMode()
    handleThemes.ToggleDarkMode()
+end
+function ChangeColors(color)
+  handleThemes.Change_colors(color)
 end

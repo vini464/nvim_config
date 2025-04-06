@@ -10,14 +10,14 @@ return {
     "williamboman/mason-lspconfig.nvim",
     dependencies = {
       {
-  'mrcjkb/rustaceanvim',
-  version = '^5', -- Recommended
-  lazy = false, -- This plugin is already lazy
-},
+        'mrcjkb/rustaceanvim',
+        version = '^5', -- Recommended
+        lazy = false, -- This plugin is already lazy
+      },
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "ts_ls", "html", "cssls", "clangd", "rust_analyzer" },
+        ensure_installed = { "lua_ls", "ts_ls", "html", "cssls", "clangd", "rust_analyzer" },
       })
     end,
   },
@@ -49,11 +49,12 @@ return {
         capabilities = capabilities,
       })
       lspconfig.elixirls.setup({
-        cmd = {"elixir-ls"},
+        cmd = { "elixir-ls" },
         capabilities = capabilities,
- --       cmd = { "/home/yami/Programs/elixirls/language_server.sh" }
+        --       cmd = { "/home/yami/Programs/elixirls/language_server.sh" }
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "<leader>od", vim.diagnostic.open_float, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
     end,

@@ -1,6 +1,6 @@
 local M = {
-	default_theme="catppuccin-mocha",
-	dark="catppuccin-mocha",
-	light="catppuccin-latte",
+	dark="tokyonight-moon",
+	light="tokyonight-day",
+	default_theme="tokyonight-moon",
 } 
 return M

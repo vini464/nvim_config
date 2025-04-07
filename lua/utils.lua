@@ -18,3 +18,9 @@ end
 function ChangeColors(color)
   handleThemes.Change_colors(color)
 end
+function SetDefaultDarkTheme(color)
+  handleThemes.SetDefautDarkTheme(color)
+end
+function SetDefaultLightTheme(color)
+  handleThemes.SetDefautLightTheme(color)
+end

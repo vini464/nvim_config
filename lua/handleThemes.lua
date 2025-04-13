@@ -33,6 +33,25 @@ M = {
     M.Change_colors(actual_theme)
   end,
 
+  ToggleTransparency = function()
+    local table = tableUpdater.readTable(themes_path)
+    local actual_theme = table.default_theme
+    if table.default_transparency == "off" then
+      M.Change_colors(actual_theme)
+      M.TurnTransparent()
+      table.default_transparency = "on"
+    else
+      table.default_transparency = "off"
+      M.Change_colors(actual_theme)
+    end
+    tableUpdater.writeTable(themes_path, table)
+  end,
+
+  TurnTransparent = function()
+      vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+      vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+  end,
+
   Change_colors = function(color)
     if color == nil then
       vim.cmd.colorscheme("default")

@@ -21,9 +21,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup('plugins')
 local themes = require("utils.colorschemes")
-if (themes.default_transparency == "off") then
-  ChangeColors(themes.default_theme)
-else
-  ChangeColors(themes.default_theme)
-  TurnTransparent()
-end
+ChangeColors(themes.default_theme)

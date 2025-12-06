@@ -17,7 +17,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "html", "cssls", "clangd", "rust_analyzer" },
+        ensure_installed = { "lua_ls", "html", "cssls", "clangd", "rust_analyzer", "gopls", "pylsp" },
       })
     end,
   },
@@ -45,10 +45,8 @@ return {
       lspconfig.rust_analyzer.setup({
         capabilities = capabilities,
       })
-      lspconfig.elixirls.setup({
-        cmd = { "elixir-ls" },
+      lspconfig.gopls.setup({
         capabilities = capabilities,
-        --       cmd = { "/home/yami/Programs/elixirls/language_server.sh" }
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>od", vim.diagnostic.open_float, {})
